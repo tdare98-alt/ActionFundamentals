@@ -2,11 +2,13 @@ name: test mp
 on:
   workflow_dispatch:
 jobs:
-  - name: Hello World Docker Action tdtest
-  # You may pin to the exact commit or the version.
-  # uses: tdare98-alt/hello-world-docker-action@f5fab8b71775b050b7100a8145d3a31a8e78be16
-  uses: tdare98-alt/hello-world-docker-action@testcoursetag
-  with:
-    # Who to greet
-    who-to-greet: # default is world
-    
+  run-custom-action:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Hello World Docker Action tdtest
+      # You may pin to the exact commit or the version.
+      # uses: tdare98-alt/hello-world-docker-action@f5fab8b71775b050b7100a8145d3a31a8e78be16
+      uses: tdare98-alt/hello-world-docker-action@testcoursetag
+      with:
+        # Who to greet
+        who-to-greet: # default is world
